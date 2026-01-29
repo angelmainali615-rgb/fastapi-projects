@@ -18,6 +18,7 @@ app.include_router(school_router)
 async def root():
     return {"message": "Welcome to School Management API !"}
 
+
 #3. Run The server
 if __name__ == "__main__":
     print("Server started! Go to http://127.0.0.1:8000/docs to see the Swagger UI.")

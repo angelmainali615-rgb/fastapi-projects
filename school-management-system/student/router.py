@@ -16,3 +16,4 @@ def get_db():
 @router.post("/")
 def add_student(student: StudentCreate, db: Session = Depends(get_db)):
     return create_student(db, student)
+
