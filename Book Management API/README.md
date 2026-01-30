@@ -1,0 +1,49 @@
+# Book Management API
+
+A simple **FastAPI application** to manage books.  
+This project demonstrates a **RESTful API** with basic CRUD operations using **Pydantic** for data validation.
+
+---
+
+## Project Structure
+
+Books/
+│
+├── main.py # FastAPI app with CRUD endpoints
+├── schema.py # Pydantic Book model
+└── README.md # Project documentation
+
+---
+
+## Features
+
+- **Books**
+  - `POST /books` – Add a new book
+  - `GET /books` – List all books
+  - `GET /books/{book_id}` – Get a single book by ID
+  - `DELETE /books/{book_id}` – Delete a book by ID
+- **Validation**
+  - Uses **Pydantic** to ensure correct data types (`id`, `title`, `author`, `price`)
+- **Storage**
+  - Uses an in-memory Python list (no database required)
+
+---
+
+## Technologies Used
+
+- Python 3.x
+- FastAPI
+- Pydantic
+- Uvicorn (ASGI server)
+
+---
+
+## How to Run
+
+1. Install dependencies:
+
+```bash
+pip install fastapi uvicorn
+
+
+

@@ -1,0 +1,72 @@
+# School Management System API
+
+A **modular FastAPI application** to manage a school system with students, teachers, and school-related data.  
+Each module (`student`, `teacher`, `school`) has its own **models, schemas, service, and router**, making the project clean, maintainable, and scalable.
+
+---
+
+## 📂 Project Structure
+
+school-management-system/
+│
+├── main.py # FastAPI app initialization
+├── database.py # SQLAlchemy database setup
+├── student/
+│ ├── models.py # SQLAlchemy Student model
+│ ├── schema.py # Pydantic Student schemas
+│ ├── service.py # Student CRUD service functions
+│ └── router.py # Student API endpoints
+├── teacher/
+│ ├── models.py # SQLAlchemy Teacher model
+│ ├── schema.py # Pydantic Teacher schemas
+│ ├── service.py # Teacher CRUD service functions
+│ └── router.py # Teacher API endpoints
+├── school/
+│ ├── models.py # SQLAlchemy School model
+│ ├── schema.py # Pydantic School schemas
+│ ├── service.py # School CRUD service functions
+│ └── router.py # School API endpoints
+├── school.db # SQLite database (auto-created)
+└── README.md
+
+---
+
+## ⚡ Features
+
+- **Students**
+  - `GET /students` – List all students
+  - `POST /students` – Add a new student
+  - More endpoints (PUT, DELETE) can be added
+
+- **Teachers**
+  - `GET /teachers` – List all teachers
+  - `POST /teachers` – Add a new teacher
+
+- **School**
+  - `GET /schools` – List all schools
+  - `POST /schools` – Add a new school
+
+- **Database**
+  - SQLite database using SQLAlchemy
+  - Dependency injection using `Depends(get_db)` for sessions
+
+---
+
+## 🛠 Technologies Used
+
+- Python 3.x  
+- FastAPI  
+- SQLAlchemy  
+- Pydantic  
+- Uvicorn (ASGI server)  
+- SQLite (local database)  
+
+---
+
+## 🚀 How to Run
+
+1. Install dependencies:
+
+```bash
+pip install fastapi uvicorn sqlalchemy
+
